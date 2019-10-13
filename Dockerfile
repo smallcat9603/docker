@@ -3,43 +3,43 @@ FROM smallcat/simgrid3.21_batsim3.0.0:latest
 
 MAINTAINER smallcat "huyao0107@gmail.com"
 
-#?’uroot—p??@?–½—ß“I?sŽÒ
+#?ï¿½urootï¿½p??ï¿½@?ï¿½ï¿½ï¿½ß“I?ï¿½sï¿½ï¿½
 USER root
 
-#?s‘€ì
+#?ï¿½sï¿½ï¿½ï¿½ï¿½
 RUN apt-get update
 RUN apt-get install build-essential
 
-#Žg—p&&?Ú–½—ß
+#ï¿½gï¿½p&&?ï¿½Ú–ï¿½ï¿½ï¿½
 #RUN touch test.txt && echo "abc" >> abc.txt
 
-#?ŠO–\˜I’[Œû
+#?ï¿½Oï¿½\ï¿½Iï¿½[ï¿½ï¿½
 #EXPOSE 80 8080 1038
 
-#“Y‰Á•¶Œ
+#ï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #ADD abc.txt /opt/
 
-#“Y‰Á•¶Œ?
+#ï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
 #ADD /webapp /opt/webapp
 
-#“Y‰Áã¤?•¶Œ
+#ï¿½Yï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½
 #ADD https://www.baidu.com/img/bd_logo1.png /opt/
 
-#?’u?‹«?—Ê
+#?ï¿½u?ï¿½ï¿½?ï¿½ï¿½
 #ENV WEBAPP_PORT=9090
 
-#?’uHì–Ú?
+#?ï¿½uï¿½Hï¿½ï¿½ï¿½?
 WORKDIR /
 
-#?’u??–½—ß
-ENTRYPOINT ["ls"]
+#?ï¿½u??ï¿½ï¿½ï¿½ï¿½
+#ENTRYPOINT ["ls"]
 
-#?’u??ŽQ”
-CMD ["-a", "-l"]
+#?ï¿½u??ï¿½Qï¿½ï¿½
+#CMD ["-a", "-l"]
 
-#?’u™É
+#?ï¿½uï¿½ï¿½
 #VOLUME ["/data", "/var/www"]
 
-#?’uŽq?‘œ“IG?‘€ì
+#?ï¿½uï¿½q?ï¿½ï¿½ï¿½Iï¿½G?ï¿½ï¿½ï¿½ï¿½
 #ONBUILD ADD . /app/src
 #ONBUILD RUN echo "on build excuted" >> onbuild.txt
