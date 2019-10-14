@@ -3,43 +3,44 @@ FROM smallcat/simgrid3.21_batsim3.0.0:latest
 
 MAINTAINER smallcat "huyao0107@gmail.com"
 
-#?ï¿½urootï¿½p??ï¿½@?ï¿½ï¿½ï¿½ß“I?ï¿½sï¿½ï¿½
+#??¿½uroot?¿½p???¿½@??¿½?¿½?¿½ß“I??¿½s?¿½?¿½
 USER root
 
-#?ï¿½sï¿½ï¿½ï¿½ï¿½
+#??¿½s?¿½?¿½?¿½?¿½
 RUN apt-get update
-RUN apt-get install build-essential
+RUN apt-get install build-essential python-pip
+RUN pip install pandas networkx
 
-#ï¿½gï¿½p&&?ï¿½Ú–ï¿½ï¿½ï¿½
+#?¿½g?¿½p&&??¿½Ú–ï¿½?¿½?¿½
 #RUN touch test.txt && echo "abc" >> abc.txt
 
-#?ï¿½Oï¿½\ï¿½Iï¿½[ï¿½ï¿½
+#??¿½O?¿½\?¿½I?¿½[?¿½?¿½
 #EXPOSE 80 8080 1038
 
-#ï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+#?¿½Y?¿½?¿½?¿½?¿½?¿½?¿½
 #ADD abc.txt /opt/
 
-#ï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
+#?¿½Y?¿½?¿½?¿½?¿½?¿½?¿½?
 #ADD /webapp /opt/webapp
 
-#ï¿½Yï¿½ï¿½ï¿½?ï¿½ï¿½ï¿½ï¿½
+#?¿½Y?¿½?¿½?¿½??¿½?¿½?¿½?¿½
 #ADD https://www.baidu.com/img/bd_logo1.png /opt/
 
-#?ï¿½u?ï¿½ï¿½?ï¿½ï¿½
+#??¿½u??¿½?¿½??¿½?¿½
 #ENV WEBAPP_PORT=9090
 
-#?ï¿½uï¿½Hï¿½ï¿½ï¿½?
+#??¿½u?¿½H?¿½?¿½?¿½?
 WORKDIR /
 
-#?ï¿½u??ï¿½ï¿½ï¿½ï¿½
+#??¿½u???¿½?¿½?¿½?¿½
 #ENTRYPOINT ["ls"]
 
-#?ï¿½u??ï¿½Qï¿½ï¿½
+#??¿½u???¿½Q?¿½?¿½
 #CMD ["-a", "-l"]
 
-#?ï¿½uï¿½ï¿½
+#??¿½u?¿½?¿½
 #VOLUME ["/data", "/var/www"]
 
-#?ï¿½uï¿½q?ï¿½ï¿½ï¿½Iï¿½G?ï¿½ï¿½ï¿½ï¿½
+#??¿½u?¿½q??¿½?¿½?¿½I?¿½G??¿½?¿½?¿½?¿½
 #ONBUILD ADD . /app/src
 #ONBUILD RUN echo "on build excuted" >> onbuild.txt
