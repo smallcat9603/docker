@@ -8,7 +8,7 @@ USER root
 
 #??��s?��?��?��?��
 RUN apt-get update
-RUN apt-get install -y build-essential python-pip
+RUN apt-get install -y build-essential python-pip libmpich-dev
 RUN pip install pandas networkx
 
 #?��g?��p&&??��ږ�?��?��
