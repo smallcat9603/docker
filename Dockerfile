@@ -7,7 +7,7 @@ MAINTAINER smallcat "huyao0107@gmail.com"
 USER root
 
 #??��s?��?��?��?��
-RUN apt-get update
+RUN apt update
 RUN apt-get install -y build-essential python-pip libmpich-dev
 RUN pip install pandas networkx
 
