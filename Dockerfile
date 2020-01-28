@@ -8,9 +8,8 @@ USER root
 
 #??��s?��?��?��?��
 RUN apt-get update
-RUN apt-get install build-essential python-pip
+RUN apt-get install -y build-essential python-pip libmpich-dev
 RUN pip install pandas networkx
-RUN apt-get install libmpich-dev
 
 #?��g?��p&&??��ږ�?��?��
 #RUN touch test.txt && echo "abc" >> abc.txt
