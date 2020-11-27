@@ -7,7 +7,7 @@ MAINTAINER smallcat "huyao0107@gmail.com"
 USER root
 
 #??��s?��?��?��?��
-RUN apt-get install software-properties-common
+RUN apt-get install -y software-properties-common
 RUN apt-add-repository universe
 RUN apt update -y
 RUN apt-get install -y build-essential python-pip libmpich-dev ruby
