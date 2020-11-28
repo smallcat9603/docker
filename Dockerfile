@@ -11,8 +11,8 @@ USER root
 # RUN apt-add-repository universe
 RUN apt update -y
 RUN apt-get install -y build-essential libmpich-dev ruby
-# RUN apt-get install -y python-pip
-# RUN pip install pandas networkx
+RUN apt-get install -y python-pip
+RUN pip install pandas networkx
 
 #?��g?��p&&??��ږ�?��?��
 #RUN touch test.txt && echo "abc" >> abc.txt
